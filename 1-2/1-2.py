@@ -109,7 +109,3 @@ plt.xlabel('steps')
 plt.legend()
 plt.show()
 
-
-# %%
-
-
