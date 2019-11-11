@@ -2,7 +2,7 @@
 # To add a new markdown cell, type '# %% [markdown]'
 # %%
 import os
-os.chdir('./Justcode/deeplearning-study/1-2/')
+os.chdir('./1-2/')
 import numpy as np
 import matplotlib.pyplot as plt
 import h5py
