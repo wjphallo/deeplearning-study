@@ -10,8 +10,6 @@ import sklearn.datasets
 import sklearn.linear_model
 from planar_utils import *
 
-np.random.seed(1)
-
 
 # %%
 X, Y = load_planar_dataset()
@@ -103,7 +101,7 @@ class Layer(object):
         else:
             print('Wrong activate function!')
         self.dX = np.dot(self.W.T, self.dZ)
-        self.dW = np.dot(self.dZ, self.X.T)
+        self.dW = np.dot(self.dZ, self.X.T) / self.dZ.shape[1]
         self.db = np.mean(self.dZ, axis=1).reshape((self.n, 1))
         self.W -= alpha * self.dW
         self.b -= alpha * self.db
@@ -156,9 +154,9 @@ class Model(object):
             self.fwprop()
             self.compute_J()
             self.bkprop()
+            self.J_list.append(self.J)
             j = i + 1
             if j%50 == 0:
-                self.J_list.append(self.J)
                 print(f'第{j}次迭代的损失值: {self.J}')
 
     def predict(self, X_test):
@@ -176,7 +174,7 @@ class Model(object):
 
     def plot_loss(self):
         plt.plot(self.J_list)
-        plt.xlabel('steps per 50')
+        plt.xlabel('step')
         plt.ylabel('loss')
         plt.title('loss circle')
         plt.show()
@@ -188,7 +186,8 @@ class Model(object):
 
 
 # %%
-model = Model(X, Y, alpha=0.005, loops=4000)
+np.random.seed(3)
+model = Model(X, Y, alpha=0.4, loops=10000)
 layer1 = model.add_layer(2, 4, tanh, name='Hidden Layer')
 layer2 = model.add_layer(4, 1, sigmoid, name='Output Layer')
 model.train()

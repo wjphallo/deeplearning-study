@@ -93,7 +93,9 @@ class Layer(object):
         else:
             print('Wrong activate function!')
         self.dX = np.dot(self.W.T, self.dZ)
-        self.dW = np.dot(self.dZ, self.X.T)
+        self.dW = np.dot(self.dZ, self.X.T)# / self.X.shape[1] 
+        #(本试验中这里没除m可能是万恶之源, 导致dW计算偏大, 后续选的alpha偏小,
+        #可能是这里导致训练中的各种异常, 由于最终训练结果还行, 所以没改)
         self.db = np.mean(self.dZ, axis=1).reshape((self.n, 1))
         self.W -= alpha * self.dW
         self.b -= alpha * self.db
