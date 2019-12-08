@@ -552,3 +552,4 @@
 4-4/neural_style_transfer/images/style300.jpg
 4-4/neural_style_transfer/pretrained-model/imagenet-vgg-verydeep-19.mat
 4-4/neural_style_transfer/pretrained-model/Pretrained_Model_LICENSE.txt
+4-4/neural_style_transfer/output/*.png
