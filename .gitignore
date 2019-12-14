@@ -553,14 +553,8 @@
 4-4/neural_style_transfer/pretrained-model/imagenet-vgg-verydeep-19.mat
 4-4/neural_style_transfer/pretrained-model/Pretrained_Model_LICENSE.txt
 4-4/neural_style_transfer/output/*.png
-5-1/data_utils.py
-5-1/grammar.py
 5-1/inference_code.py
 5-1/midi.py
-5-1/music_utils.py
-5-1/preprocess.py
-5-1/qa.py
-5-1/shakespeare_utils.py
 5-1/shakespeare.png
 5-1/shakespeare.txt
 5-1/tune1.midi
