@@ -6,7 +6,7 @@
 > i-j : lessen i week j programing practice ( for convenient index ) 
 
 ## Tips
-> 4-3: data file is too big, only update 4-3.ipynb, if you want to download the data, go 'Reference' downstairs.
+> after 4-3: data file is too big, ignore to upload some big files which you can see in .gitignore, if you want to download the data, go 'Reference' downstairs.
 
 ## Reference
 >如果想详细了解每周练习的具体背景和目标, 请访问[何宽的博客](https://blog.csdn.net/u013733326/article/details/79827273), 本学习项目也是基于此博客完成的.
