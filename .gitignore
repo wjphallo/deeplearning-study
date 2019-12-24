@@ -568,3 +568,11 @@
 5-1/models/model_shakespeare_kiank.h5
 5-1/output/my_music.midi
 5-2/data/*
+5-3/Trigger word detection/XY_dev/*
+5-3/Trigger word detection/XY_train/*
+5-3/Trigger word detection/audio_examples/*
+5-3/Trigger word detection/raw_data/*
+5-3/Trigger word detection/*.wav
+5-3/Machine Translation/models/model_kiank.h5
+5-3/Machine Translation/models/model_sisi_oklm.h5
+5-3/Machine Translation/models/oklmkiank.h5
